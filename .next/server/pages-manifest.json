@@ -2,6 +2,7 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/game": "pages/game.js",
-  "/grid": "pages/grid.js"
+  "/grid": "pages/grid.js",
+  "/": "pages/index.js",
+  "/game": "pages/game.js"
 }

@@ -1,6 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 function Item(props) {
   const { sx, ...other } = props;
@@ -10,7 +12,6 @@ function Item(props) {
         bgcolor: 'primary.main',
         color: 'white',
         p: 1,
-        borderRadius: 8,
         textAlign: 'center',
         fontSize: 19,
         fontWeight: '700',
@@ -33,7 +34,6 @@ export default function Gap() {
           display: 'grid',
           gap: 1,
           gridTemplateColumns: 'repeat(2, 1fr)',
-          borderRadius: 8,
         }}
       >
         <Box
@@ -42,7 +42,6 @@ export default function Gap() {
               height: 250,
               minWidth: 100,
               minheight: 100,
-              borderRadius: 8,
               mx: "auto",
               bgcolor: 'blue',
               '&:hover': {
@@ -94,6 +93,9 @@ export default function Gap() {
             }}
           />
       </Box>
+      <Stack sx={{my:2}} spacing={2} direction="row">
+      <Button variant="contained" href="/" >Go back</Button>
+      </Stack>
     </div>
   );
 }
