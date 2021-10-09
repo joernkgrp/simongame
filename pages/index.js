@@ -33,10 +33,10 @@ export default function Index() {
         <FormControl component="fieldset">
           <FormLabel component="legend">Select a handicap</FormLabel>
           <RadioGroup row aria-label="handicap" name="row-radio-buttons-group">
-            <FormControlLabel value="see" control={<Radio />} label="I am blind" />
-            <FormControlLabel value="hear" control={<Radio />} label="I am deaf and dumb" />
+            <FormControlLabel value="see" control={<Radio />} label="I can’t see" />
+            <FormControlLabel value="hear" control={<Radio />} label="I can’t hear" />
             <FormControlLabel value="seehear" control={<Radio />} label="I can neither see nor hear" />
-            <FormControlLabel value="nothing" control={<Radio />} label="None of these" />
+            <FormControlLabel value="nothing" control={<Radio />} label="I have no handicap" />
           </RadioGroup>
         </FormControl>
 
