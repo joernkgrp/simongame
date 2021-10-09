@@ -1,9 +1,7 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Link from '../src/Link';
-
-
+import Button from '@mui/material/Button';
 
 export default function RowAndColumnSpacing() {
   return (
@@ -78,9 +76,7 @@ export default function RowAndColumnSpacing() {
         Visibility Hidden
       </Box>
       <Box sx={{ mx: "auto" }}>
-        <Link href="/" color="secondary">
-          Zurück
-        </Link>
+      <Button variant="contained" href="/" >Go back</Button>
       </Box>
     </Box>
   );
