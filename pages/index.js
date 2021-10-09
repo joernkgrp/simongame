@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import ProTip from '../src/ProTip';
-import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -42,8 +41,9 @@ export default function Index() {
         </FormControl>
 
         <Stack spacing={2} direction="row">
-          <Button variant="contained" href="/game" >Start Game</Button>
+          <Button variant="contained" href="/game" >Start</Button>
           <Button variant="outlined">I need help</Button>
+          <Button variant="outlined" href="/grid">See grid</Button>
         </Stack>
 
         <ProTip />

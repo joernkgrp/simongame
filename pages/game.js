@@ -2,23 +2,25 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 export default function RowAndColumnSpacing() {
   return (
-    <Box sx={{ width: '100%', borderRadius: '50%' }}>
-      <Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 2, md: 2 }}>
+    <Box sx={{ width: '100%', p: 2,}}>
+      <Grid container rowSpacing={2} columnSpacing={2}>
         <Grid item xs={6}>
           <Box
             sx={{
               width: '100%',
-              height: 200,
+              height: 250,
               minWidth: 100,
               minheight: 100,
+              borderRadius: 4,
               mx: "auto",
-              bgcolor: 'red',
+              bgcolor: '#d32f2f',
               '&:hover': {
-                backgroundColor: 'red',
-                opacity: [0.9, 0.8, 0.7],
+                backgroundColor: '#9a0007',
+                opacity: [1, 1, 1],
               },
             }}
           />
@@ -27,14 +29,15 @@ export default function RowAndColumnSpacing() {
           <Box
             sx={{
               width: '100%',
-              height: 200,
+              height: 250,
               minWidth: 100,
               minheight: 100,
+              borderRadius: 4,
               mx: "auto",
-              bgcolor: 'blue',
+              bgcolor: '#1976d2',
               '&:hover': {
-                backgroundColor: 'blue',
-                opacity: [0.9, 0.8, 0.7],
+                backgroundColor: '#004ba0',
+                opacity: [1, 1, 1],
               },
             }}
           />
@@ -43,14 +46,15 @@ export default function RowAndColumnSpacing() {
           <Box
             sx={{
               width: '100%',
-              height: 200,
+              height: 250,
               minWidth: 100,
               minheight: 100,
+              borderRadius: 4,
               mx: "auto",
-              bgcolor: 'green',
+              bgcolor: '#388e3c',
               '&:hover': {
-                backgroundColor: 'green',
-                opacity: [0.9, 0.8, 0.7],
+                backgroundColor: '#00600f',
+                opacity: [1, 1, 1],
               },
             }}
           />
@@ -59,14 +63,15 @@ export default function RowAndColumnSpacing() {
           <Box
             sx={{
               width: '100%',
-              height: 200,
+              height: 250,
               minWidth: 100,
               minheight: 100,
+              borderRadius: 4,
               mx: "auto",
-              bgcolor: 'yellow',
+              bgcolor: '#fbc02d',
               '&:hover': {
-                backgroundColor: 'yellow',
-                opacity: [0.9, 0.8, 0.7],
+                backgroundColor: '#c49000',
+                opacity: [1, 1, 1],
               },
             }}
           />
@@ -75,9 +80,10 @@ export default function RowAndColumnSpacing() {
       <Box component="div" sx={{ visibility: 'hidden' }}>
         Visibility Hidden
       </Box>
-      <Box sx={{ mx: "auto" }}>
-      <Button variant="contained" href="/" >Go back</Button>
-      </Box>
+      <Stack spacing={2} direction="row">
+          <Button variant="contained" href="/" >Go back</Button>
+          <Button variant="outlined">I need help</Button>
+        </Stack>
     </Box>
   );
 }
