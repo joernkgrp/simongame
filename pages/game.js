@@ -22,12 +22,14 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function RowAndColumnSpacing() {
   return (
     <Box sx={{ width: '100%', borderRadius: '50%' }}>
-      <Grid container rowSpacing={4} columnSpacing={{ xs: 4, sm: 4, md: 4 }}>
+      <Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 2, md: 2 }}>
         <Grid item xs={6}>
           <Box
             sx={{
-              width: 300,
-              height: 300,
+              width: '100%',
+              height: 200,
+              minWidth: 100,
+              minheight: 100,
               mx: "auto",
               bgcolor: 'red',
               '&:hover': {
@@ -40,8 +42,10 @@ export default function RowAndColumnSpacing() {
         <Grid item xs={6}>
           <Box
             sx={{
-              width: 300,
-              height: 300,
+              width: '100%',
+              height: 200,
+              minWidth: 100,
+              minheight: 100,
               mx: "auto",
               bgcolor: 'blue',
               '&:hover': {
@@ -54,8 +58,10 @@ export default function RowAndColumnSpacing() {
         <Grid item xs={6}>
           <Box
             sx={{
-              width: 300,
-              height: 300,
+              width: '100%',
+              height: 200,
+              minWidth: 100,
+              minheight: 100,
               mx: "auto",
               bgcolor: 'green',
               '&:hover': {
@@ -68,8 +74,10 @@ export default function RowAndColumnSpacing() {
         <Grid item xs={6}>
           <Box
             sx={{
-              width: 300,
-              height: 300,
+              width: '100%',
+              height: 200,
+              minWidth: 100,
+              minheight: 100,
               mx: "auto",
               bgcolor: 'yellow',
               '&:hover': {
@@ -83,7 +91,7 @@ export default function RowAndColumnSpacing() {
       <Box component="div" sx={{ visibility: 'hidden' }}>
         Visibility Hidden
       </Box>
-      <Box sx={{ mx: "auto", width: 200 }}>
+      <Box sx={{ mx: "auto" }}>
         <Link href="/" color="secondary">
           Zurück
         </Link>
