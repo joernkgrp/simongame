@@ -13,7 +13,7 @@ export default function Index() {
         <Typography variant="h4" component="h1" gutterBottom>
           Simon Game
         </Typography>
-        <Link href="/about" color="secondary">
+        <Link href="/game" color="secondary">
           Zum Spiel
         </Link>
         <ProTip />
