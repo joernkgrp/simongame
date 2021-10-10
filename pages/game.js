@@ -1,4 +1,8 @@
 import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -40,108 +44,123 @@ export default function RowAndColumnSpacing() {
   };
 
   return (
-    <Box sx={{ width: '100%', p: 2, }}>
-      <Grid container rowSpacing={2} columnSpacing={2}>
-        <Grid item xs={6}>
-          <Box
-            sx={{
-              width: '100%',
-              height: 250,
-              minWidth: 100,
-              minheight: 100,
-              borderRadius: 4,
-              mx: "auto",
-              bgcolor: '#d32f2f',
-              '&:hover': {
-                backgroundColor: '#9a0007',
-                opacity: [1, 1, 1],
-              },
-            }}
-            onClick={handleClick('Red')}
-          />
-        </Grid>
-        <Grid item xs={6}>
-          <Box
-            sx={{
-              width: '100%',
-              height: 250,
-              minWidth: 100,
-              minheight: 100,
-              borderRadius: 4,
-              mx: "auto",
-              bgcolor: '#1976d2',
-              '&:hover': {
-                backgroundColor: '#004ba0',
-                opacity: [1, 1, 1],
-              },
-            }}
-            onClick={handleClick('Blue')}
-          />
-        </Grid>
-        <Grid item xs={6}>
-          <Box
-            sx={{
-              width: '100%',
-              height: 250,
-              minWidth: 100,
-              minheight: 100,
-              borderRadius: 4,
-              mx: "auto",
-              bgcolor: '#388e3c',
-              '&:hover': {
-                backgroundColor: '#00600f',
-                opacity: [1, 1, 1],
-              },
-            }}
-            onClick={handleClick('Green')}
-          />
-        </Grid>
-        <Grid item xs={6}>
-          <Box
-            sx={{
-              width: '100%',
-              height: 250,
-              minWidth: 100,
-              minheight: 100,
-              borderRadius: 4,
-              mx: "auto",
-              bgcolor: '#fbc02d',
-              '&:hover': {
-                backgroundColor: '#c49000',
-                opacity: [1, 1, 1],
-              },
-            }}
-            onClick={handleClick('Yellow')}
-          />
-        </Grid>
-      </Grid>
-      <Snackbar
-        key={messageInfo ? messageInfo.key : undefined}
-        open={open}
-        autoHideDuration={2000}
-        onClose={handleClose}
-        TransitionProps={{ onExited: handleExited }}
-        message={messageInfo ? messageInfo.message : undefined}
-        action={
-          <React.Fragment>
+    <Container maxWidth="false">
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar>
             <IconButton
-              aria-label="close"
+              href="/"
+              size="large"
+              edge="start"
               color="inherit"
-              sx={{ p: 0.5 }}
-              onClick={handleClose}
+              aria-label="menu"
+              sx={{ mr: 2 }}
             >
               <CloseIcon />
             </IconButton>
-          </React.Fragment>
-        }
-      />
-      <Box component="div" sx={{ visibility: 'hidden' }}>
-        Visibility Hidden
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Simon Game
+            </Typography>
+          </Toolbar>
+        </AppBar>
       </Box>
-      <Stack spacing={2} direction="row">
-        <Button variant="contained" href="/" >Go back</Button>
-        <Button variant="outlined">I need help</Button>
-      </Stack>
-    </Box>
+
+      <Box sx={{ width: '100%', p: 2, }}>
+        <Grid container rowSpacing={2} columnSpacing={2}>
+          <Grid item xs={6}>
+            <Box
+              sx={{
+                width: '100%',
+                height: 250,
+                minWidth: 100,
+                minheight: 100,
+                borderRadius: 4,
+                mx: "auto",
+                bgcolor: '#d32f2f',
+                '&:hover': {
+                  backgroundColor: '#9a0007',
+                  opacity: [1, 1, 1],
+                },
+              }}
+              onClick={handleClick('Red')}
+            />
+          </Grid>
+          <Grid item xs={6}>
+            <Box
+              sx={{
+                width: '100%',
+                height: 250,
+                minWidth: 100,
+                minheight: 100,
+                borderRadius: 4,
+                mx: "auto",
+                bgcolor: '#1976d2',
+                '&:hover': {
+                  backgroundColor: '#004ba0',
+                  opacity: [1, 1, 1],
+                },
+              }}
+              onClick={handleClick('Blue')}
+            />
+          </Grid>
+          <Grid item xs={6}>
+            <Box
+              sx={{
+                width: '100%',
+                height: 250,
+                minWidth: 100,
+                minheight: 100,
+                borderRadius: 4,
+                mx: "auto",
+                bgcolor: '#388e3c',
+                '&:hover': {
+                  backgroundColor: '#00600f',
+                  opacity: [1, 1, 1],
+                },
+              }}
+              onClick={handleClick('Green')}
+            />
+          </Grid>
+          <Grid item xs={6}>
+            <Box
+              sx={{
+                width: '100%',
+                height: 250,
+                minWidth: 100,
+                minheight: 100,
+                borderRadius: 4,
+                mx: "auto",
+                bgcolor: '#fbc02d',
+                '&:hover': {
+                  backgroundColor: '#c49000',
+                  opacity: [1, 1, 1],
+                },
+              }}
+              onClick={handleClick('Yellow')}
+            />
+          </Grid>
+        </Grid>
+        <Snackbar
+          key={messageInfo ? messageInfo.key : undefined}
+          open={open}
+          autoHideDuration={2000}
+          onClose={handleClose}
+          TransitionProps={{ onExited: handleExited }}
+          message={messageInfo ? messageInfo.message : undefined}
+          action={
+            <React.Fragment>
+              <IconButton
+                aria-label="close"
+                color="inherit"
+                sx={{ p: 0.5 }}
+                onClick={handleClose}
+              >
+                <CloseIcon />
+              </IconButton>
+            </React.Fragment>
+          }
+        />
+      </Box>
+    </Container>
   );
 }

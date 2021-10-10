@@ -1,9 +1,13 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
+import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Stack from '@mui/material/Stack';
 import ProTip from '../src/ProTip';
 import Copyright from '../src/Copyright';
 import Radio from '@mui/material/Radio';
@@ -14,11 +18,17 @@ import FormLabel from '@mui/material/FormLabel';
 
 export default function Index() {
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="false">
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Simon Game
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </Box>
       <Box sx={{ my: 2 }}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          Simon Game
-        </Typography>
         <Typography variant="h6" component="h2" gutterBottom>
           Welcome! This game is accessible for everyone.
         </Typography>
