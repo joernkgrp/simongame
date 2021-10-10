@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
 // Create a theme instance.
-const theme = createTheme({
+const theme = createTheme({          /* 5% Abstand auf allen Seiten */
   typography: {
     fontFamily: [
       '-apple-system',
@@ -32,7 +32,6 @@ const theme = createTheme({
       contrastText: '#fff',
     },
   },
-  spacing: 8,
 });
 
 export default theme;

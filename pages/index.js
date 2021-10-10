@@ -4,8 +4,6 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import ProTip from '../src/ProTip';
@@ -18,7 +16,7 @@ import FormLabel from '@mui/material/FormLabel';
 
 export default function Index() {
   return (
-    <Container maxWidth="false">
+    <Container maxWidth="false" sx={{ px: 0, }}>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
@@ -28,7 +26,7 @@ export default function Index() {
           </Toolbar>
         </AppBar>
       </Box>
-      <Box sx={{ my: 2 }}>
+      <Box sx={{ my: 2, mx: 2 }}>
         <Typography variant="h6" component="h2" gutterBottom>
           Welcome! This game is accessible for everyone.
         </Typography>

@@ -44,8 +44,8 @@ export default function RowAndColumnSpacing() {
   };
 
   return (
-    <Container maxWidth="false">
-      <Box sx={{ flexGrow: 1 }}>
+    <Container maxWidth="false" sx={{ px: 0, }}>
+      <Box sx={{ flexGrow: 1, }}>
         <AppBar position="static">
           <Toolbar>
             <IconButton
