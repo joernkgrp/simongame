@@ -2,10 +2,10 @@ import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
 // Create a theme instance.
-const theme = createTheme({          /* 5% Abstand auf allen Seiten */
+const theme = createTheme({        
   typography: {
     fontFamily: [
-      'Space Grotesk',
+      'Recursive',
       'sans-serif',
     ].join(','),
   },
