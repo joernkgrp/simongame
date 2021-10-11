@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
 // Create a theme instance.
-const theme = createTheme({        
+const theme = createTheme({
   typography: {
     fontFamily: [
       'Recursive',
@@ -25,5 +25,6 @@ const theme = createTheme({
     },
   },
 });
+
 
 export default theme;

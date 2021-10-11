@@ -5,65 +5,57 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import Snackbar from '@mui/material/Snackbar';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 export default function RowAndColumnSpacing() {
-  const [snackPack, setSnackPack] = React.useState([]);
-  const [open, setOpen] = React.useState(false);
-  const [messageInfo, setMessageInfo] = React.useState(undefined);
+  const [open, setOpen] = React.useState(true);
 
-  React.useEffect(() => {
-    if (snackPack.length && !messageInfo) {
-      // Set a new snack when we don't have an active one
-      setMessageInfo({ ...snackPack[0] });
-      setSnackPack((prev) => prev.slice(1));
-      setOpen(true);
-    } else if (snackPack.length && messageInfo && open) {
-      // Close an active snack when a new one is added
-      setOpen(false);
-    }
-  }, [snackPack, messageInfo, open]);
-
-  const handleClick = (message) => () => {
-    setSnackPack((prev) => [...prev, { message, key: new Date().getTime() }]);
+  const handleClickOpen = () => {
+    setOpen(true);
   };
 
-  const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
+  const handleClose = () => {
     setOpen(false);
   };
 
-  const handleExited = () => {
-    setMessageInfo(undefined);
-  };
-
   return (
-    <Container maxWidth="false" sx={{ px: 0, }}>
-      <Box sx={{ flexGrow: 1, }}>
-        <AppBar position="static">
+    <Container sx={{ px: 0}}>
+      <Box sx={{ flexGrow: 1,  }}>
+        <AppBar position="fixed">
           <Toolbar>
-            <IconButton
-              href="/"
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <CloseIcon />
-            </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Remember the buttons
+              Remember the button
             </Typography>
           </Toolbar>
         </AppBar>
       </Box>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"How to start"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Remember the random button lighting up and reproduce the order by pressing the right button.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} autoFocus>
+            Okay
+          </Button>
+        </DialogActions>
+      </Dialog>
 
-      <Box sx={{ width: '100%', p: 2, }}>
+      <Box sx={{ width: '100%', mt: 8, p: 2, }}>
         <Grid container rowSpacing={2} columnSpacing={2}>
           <Grid item xs={6}>
             <Box
@@ -80,7 +72,6 @@ export default function RowAndColumnSpacing() {
                   opacity: [1, 1, 1],
                 },
               }}
-              onClick={handleClick('Red')}
             />
           </Grid>
           <Grid item xs={6}>
@@ -98,7 +89,6 @@ export default function RowAndColumnSpacing() {
                   opacity: [1, 1, 1],
                 },
               }}
-              onClick={handleClick('Blue')}
             />
           </Grid>
           <Grid item xs={6}>
@@ -116,7 +106,6 @@ export default function RowAndColumnSpacing() {
                   opacity: [1, 1, 1],
                 },
               }}
-              onClick={handleClick('Green')}
             />
           </Grid>
           <Grid item xs={6}>
@@ -134,30 +123,9 @@ export default function RowAndColumnSpacing() {
                   opacity: [1, 1, 1],
                 },
               }}
-              onClick={handleClick('Yellow')}
             />
           </Grid>
         </Grid>
-        <Snackbar
-          key={messageInfo ? messageInfo.key : undefined}
-          open={open}
-          autoHideDuration={2000}
-          onClose={handleClose}
-          TransitionProps={{ onExited: handleExited }}
-          message={messageInfo ? messageInfo.message : undefined}
-          action={
-            <React.Fragment>
-              <IconButton
-                aria-label="close"
-                color="inherit"
-                sx={{ p: 0.5 }}
-                onClick={handleClose}
-              >
-                <CloseIcon />
-              </IconButton>
-            </React.Fragment>
-          }
-        />
       </Box>
     </Container>
   );

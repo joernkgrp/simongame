@@ -32,80 +32,80 @@ export default function Form() {
     };
 
     return (
-            <Container component="main" maxWidth="m">
-                <Box
-                    sx={{
-                        marginTop: 2,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                    }}
-                >
-                    <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                        <SettingsIcon />
-                    </Avatar>
-                    <Typography component="h1" variant="h5">
-                        A few more things
-                    </Typography>
-                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-                        <TextField
-                            margin="normal"
-                            fullWidth
-                            label="Your name"
-                            name="name"
-                            placeholder="John Doe"
-                            helperText="Please type in your name."
-                            autoFocus
-                        />
-                        <FormControl sx={{ mt: 2 }} fullWidth>
-                            <InputLabel id="demo-simple-select-helper-label">Your handicap</InputLabel>
-                            <Select
-                                value={handicap}
-                                label="Your handicap"
-                                onChange={handleChange}
-                            >
-                                <MenuItem value={0}>I can’t see</MenuItem>
-                                <MenuItem value={1}>I can’t hear</MenuItem>
-                                <MenuItem value={2}>I can neither see nor hear</MenuItem>
-                                <MenuItem value={3}>I have no handicap</MenuItem>
-                            </Select>
-                            <FormHelperText>Please select a handicap.</FormHelperText>
-                        </FormControl>
-                        <FormControl sx={{ mt: 2 }} fullWidth>
-                            <InputLabel id="demo-simple-select-helper-label">Your input type</InputLabel>
-                            <Select
-                                value={handicap}
-                                label="Your input type"
-                                onChange={handleChange}
-                            >
-                                <MenuItem value={0}>Speak</MenuItem>
-                                <MenuItem value={1}>Touch or click</MenuItem>
-                                <MenuItem value={2}>Sense</MenuItem>
-                                <MenuItem value={3}>All types</MenuItem>
-                            </Select>
-                            <FormHelperText>Please select an input type.</FormHelperText>
-                        </FormControl>
-                        <Button
-                            startIcon={<PlayArrowIcon />}
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            sx={{ mt: 4 }}
-                            href="/game"
+        <Container component="main" maxWidth="m">
+            <Box
+                sx={{
+                    marginTop: 4,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                }}
+            >
+                <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                    <SettingsIcon />
+                </Avatar>
+                <Typography component="h1" variant="h5">
+                    A few more things
+                </Typography>
+                <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 2 }}>
+                    <TextField
+                        margin="normal"
+                        fullWidth
+                        label="Your name"
+                        name="name"
+                        placeholder="John Doe"
+                        helperText="Please type in your name."
+                        autoFocus
+                    />
+                    <FormControl sx={{ mt: 3 }} fullWidth>
+                        <InputLabel id="demo-simple-select-helper-label">Your handicap</InputLabel>
+                        <Select
+                            value={handicap}
+                            label="Your handicap"
+                            onChange={handleChange}
                         >
-                            Start Game
-                        </Button>
-                        <Button
-                            startIcon={<ArrowBackIcon />}
-                            fullWidth
-                            variant="outlined"
-                            sx={{ mt: 2}}
-                            href="/"
+                            <MenuItem value={0}>I can’t see</MenuItem>
+                            <MenuItem value={1}>I can’t hear</MenuItem>
+                            <MenuItem value={2}>I can neither see nor hear</MenuItem>
+                            <MenuItem value={3}>I have no handicap</MenuItem>
+                        </Select>
+                        <FormHelperText>Please select a handicap.</FormHelperText>
+                    </FormControl>
+                    <FormControl sx={{ mt: 4 }} fullWidth>
+                        <InputLabel id="demo-simple-select-helper-label">Your input type</InputLabel>
+                        <Select
+                            value={handicap}
+                            label="Your input type"
+                            onChange={handleChange}
                         >
-                            Back
-                        </Button>
-                    </Box>
+                            <MenuItem value={0}>Speak</MenuItem>
+                            <MenuItem value={1}>Touch or click</MenuItem>
+                            <MenuItem value={2}>Sense</MenuItem>
+                            <MenuItem value={3}>All types</MenuItem>
+                        </Select>
+                        <FormHelperText>Please select an input type.</FormHelperText>
+                    </FormControl>
+                    <Button
+                        startIcon={<PlayArrowIcon />}
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        sx={{ mt: 4 }}
+                        href="/game"
+                    >
+                        Start Game
+                    </Button>
+                    <Button
+                        startIcon={<ArrowBackIcon />}
+                        fullWidth
+                        variant="outlined"
+                        sx={{ mt: 2 }}
+                        href="/"
+                    >
+                        Back
+                    </Button>
                 </Box>
-            </Container>
+            </Box>
+        </Container>
     );
 }

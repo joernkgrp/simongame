@@ -23,18 +23,18 @@ export default function Index() {
   return (
     <Container maxWidth="m">
       <Box sx={{
-        marginTop: 2,
+        marginTop: 4,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
       }}>
-        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+        <Avatar sx={{ m: 1}}>
           <AccessibilityNewIcon />
         </Avatar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Hey, you!
         </Typography>
-        <FormControl sx={{ my: 2 }} fullWidth>
+        <FormControl sx={{ my: 4 }} fullWidth>
           <InputLabel>Language</InputLabel>
           <Select
             value={language}
@@ -42,9 +42,9 @@ export default function Index() {
             onChange={handleChange}
           >
             <MenuItem value={0} selected={true}>🇺🇸 English</MenuItem>
-            <MenuItem value={1}>🇩🇪 Deutsch</MenuItem>
-            <MenuItem value={2}>🇫🇷 Français</MenuItem>
-            <MenuItem value={3}>🇪🇸 Español</MenuItem>
+            <MenuItem value={1} disabled={true}>🇩🇪 Deutsch</MenuItem>
+            <MenuItem value={2} disabled={true}>🇫🇷 Français</MenuItem>
+            <MenuItem value={3} disabled={true}>🇪🇸 Español</MenuItem>
           </Select>
           <FormHelperText>Please select a language.</FormHelperText>
         </FormControl>
@@ -53,10 +53,9 @@ export default function Index() {
           type="submit"
           fullWidth
           variant="contained"
-          sx={{ mt: 2 }}
           href="/form"
         >
-          Start Game
+          Continue
         </Button>
         <Copyright />
       </Box>
