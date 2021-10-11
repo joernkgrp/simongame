@@ -5,16 +5,8 @@ import { red } from '@mui/material/colors';
 const theme = createTheme({          /* 5% Abstand auf allen Seiten */
   typography: {
     fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
+      'Space Grotesk',
       'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
     ].join(','),
   },
   palette: {
