@@ -49,7 +49,7 @@ export default function RowAndColumnSpacing() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} autoFocus>
+          <Button onClick={handleClose}>
             Okay
           </Button>
         </DialogActions>
@@ -61,7 +61,7 @@ export default function RowAndColumnSpacing() {
             <Box
               sx={{
                 width: '100%',
-                height: 250,
+                height: 200,
                 minWidth: 100,
                 minheight: 100,
                 borderRadius: 4,
@@ -78,7 +78,7 @@ export default function RowAndColumnSpacing() {
             <Box
               sx={{
                 width: '100%',
-                height: 250,
+                height: 200,
                 minWidth: 100,
                 minheight: 100,
                 borderRadius: 4,
@@ -95,7 +95,7 @@ export default function RowAndColumnSpacing() {
             <Box
               sx={{
                 width: '100%',
-                height: 250,
+                height: 200,
                 minWidth: 100,
                 minheight: 100,
                 borderRadius: 4,
@@ -112,7 +112,7 @@ export default function RowAndColumnSpacing() {
             <Box
               sx={{
                 width: '100%',
-                height: 250,
+                height: 200,
                 minWidth: 100,
                 minheight: 100,
                 borderRadius: 4,

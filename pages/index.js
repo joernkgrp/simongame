@@ -28,7 +28,7 @@ export default function Index() {
         flexDirection: 'column',
         alignItems: 'center',
       }}>
-        <Avatar sx={{ m: 1}}>
+        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
           <AccessibilityNewIcon />
         </Avatar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
