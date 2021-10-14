@@ -55,9 +55,12 @@ export default function Index() {
               🇩🇪 Deutsch
             </MenuItem>
             <MenuItem value={2} disabled={true}>
-              🇫🇷 Français
+              🇩🇪 Leichtes Deutsch
             </MenuItem>
             <MenuItem value={3} disabled={true}>
+              🇫🇷 Français
+            </MenuItem>
+            <MenuItem value={4} disabled={true}>
               🇪🇸 Español
             </MenuItem>
           </Select>
