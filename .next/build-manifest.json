@@ -38,6 +38,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/game.js"
+    ],
+    "/mode": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/mode.js"
     ]
   },
   "ampFirstPages": []
