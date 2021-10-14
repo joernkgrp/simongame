@@ -29,7 +29,7 @@ export default function RowAndColumnSpacing() {
         <AppBar position="fixed">
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Remember the button
+              Remember the order
             </Typography>
           </Toolbar>
         </AppBar>
@@ -45,7 +45,7 @@ export default function RowAndColumnSpacing() {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Remember the random button lighting up and reproduce the order by pressing the right button.
+            Remember the random tile lighting up and reproduce the order by pressing the right tile.
           </DialogContentText>
         </DialogContent>
         <DialogActions>

@@ -43,8 +43,9 @@ export default function Index() {
           >
             <MenuItem value={0} selected={true}>🇺🇸 English</MenuItem>
             <MenuItem value={1} disabled={true}>🇩🇪 Deutsch</MenuItem>
-            <MenuItem value={2} disabled={true}>🇫🇷 Français</MenuItem>
-            <MenuItem value={3} disabled={true}>🇪🇸 Español</MenuItem>
+            <MenuItem value={2} disabled={true}>🇩🇪 Leichtes Deutsch</MenuItem>
+            <MenuItem value={3} disabled={true}>🇫🇷 Français</MenuItem>
+            <MenuItem value={4} disabled={true}>🇪🇸 Español</MenuItem>
           </Select>
           <FormHelperText>Please select a language.</FormHelperText>
         </FormControl>
