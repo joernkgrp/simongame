@@ -1,7 +1,12 @@
 import * as React from "react";
+import { useState } from "react";
+import { Icon } from "@iconify/react";
+import Confetti from "react-confetti";
 import Avatar from "@mui/material/Avatar";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Slider from "@mui/material/Slider";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Copyright from "../src/Copyright";
@@ -15,11 +20,16 @@ import Typography from "@mui/material/Typography";
 import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-export default function Index() {
-  const [language, setLanguage] = React.useState(0);
+let defaultLanguage = 0; // English
+let startValue = 0;
 
-  const handleChange = (event) => {
-    setLanguage(event.target.value);
+export default function ContinuousSlider() {
+  const [language, setLanguage] = React.useState(defaultLanguage);
+
+  const [value, setValue] = React.useState(startValue);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
   };
 
   return (

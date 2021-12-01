@@ -2,8 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/form": "pages/form.js",
-  "/game": "pages/game.js",
   "/": "pages/index.js",
-  "/mode": "pages/mode.js"
+  "/slider": "pages/slider.js"
 }
